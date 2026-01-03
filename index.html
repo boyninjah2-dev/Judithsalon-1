@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judith Saloon | Dreadlocks Sanctuary in Kenyatta Market, Nairobi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rastafari:wght@400&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --rasta-red: #C00;
+            --rasta-gold: #FFD700;
+            --rasta-green: #008000;
+            --rasta-black: #000;
+            --light: #F8F5E9;
+            --text: #222;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--rasta-red), var(--rasta-gold), var(--rasta-green));
+        }
+        
+        .rasta-title {
+            background: linear-gradient(to right, var(--rasta-red), var(--rasta-gold), var(--rasta-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: var(--rasta-black);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-main {
+            color: var(--rasta-gold);
+        }
+        
+        .logo-suffix {
+            color: white;
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            color: var(--rasta-green);
+            font-size: 2.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        .nav-links a:hover {
+            color: var(--rasta-gold);
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--rasta-gold);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/dre\ 3.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 span {
+            color: var(--rasta-gold);
+        }
+        
+        .tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: var(--rasta-gold);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .location {
+            font-size: 1.3rem;
+            color: var(--rasta-gold);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--rasta-red), var(--rasta-gold));
+            color: var(--rasta-black);
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+        }
+        
+        /* Rasta Banner */
+        .rasta-banner {
+            height: 10px;
+            background: linear-gradient(to right, var(--rasta-red), var(--rasta-gold), var(--rasta-green));
+        }
+        
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            border-top: 5px solid var(--rasta-green);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            color: var(--rasta-red);
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .service-icon {
+            color: var(--rasta-gold);
+        }
+        
+        .service-content ul {
+            list-style-type: none;
+        }
+        
+        .service-content li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .service-content li:before {
+            content: "✓";
+            color: var(--rasta-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+         .video-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 5px solid white;
+            outline: 2px solid var(--rasta-gold);
+            position: relative;
+            height: 400px;
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .play-button {
+            background-color: rgba(255, 215, 0, 0.8);
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 3px solid white;
+        }
+        
+        .play-button:hover {
+            background-color: rgba(255, 215, 0, 1);
+            transform: scale(1.1);
+        }
+        
+        .play-button i {
+            color: var(--rasta-black);
+            font-size: 1.8rem;
+            margin-left: 5px;
+        }
+        /*.about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 5px solid white;
+            outline: 2px solid var(--rasta-gold);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }*/
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--rasta-black);
+            color: white;
+        }
+        
+        .contact-section h2 {
+            color: white;
+        }
+        
+        .contact-section h2:after {
+            background: linear-gradient(to right, var(--rasta-red), var(--rasta-gold));
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            color: var(--rasta-gold);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .contact-details {
+            margin-top: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-right: 15px;
+            color: var(--rasta-gold);
+            width: 20px;
+            font-size: 1.2rem;
+        }
+        
+.map-container {
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border: 3px solid var(--rasta-gold);
+            height: 300px;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .map-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+        }
+        
+        .map-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .map-container:hover .map-overlay {
+            opacity: 1;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+        }
+        
+        .map-overlay i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--rasta-gold);
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            border-left: 3px solid var(--rasta-green);
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-left: 3px solid var(--rasta-gold);
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, var(--rasta-red), var(--rasta-black), var(--rasta-green));
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin-left: 20px;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            color: var(--rasta-gold);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+            border: 5px solid var(--rasta-gold);
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--rasta-red);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--rasta-black);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: var(--transition);
+                pointer-events: none;
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .tagline {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 70px 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                height: 90vh;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Rasta Banner -->
+    <div class="rasta-banner"></div>
+
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <i class="fas fa-crown logo-icon"></i>
+                    <span class="logo-main">Judith</span><span class="logo-suffix">Saloon</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Our Sanctuary</a></li>
+                    <li><a href="#services">Our Craft</a></li>
+                    <li><a href="#contact">Visit Us</a></li>
+                    <li><a href="#" id="bookBtn">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1><span>Judith Saloon</span></h1>
+                <div class="tagline">Master Architect & Caretaker for Locs</div>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Kenyatta Market, Nairobi, Kenya
+                </div>
+                <p>Our work is much more than just hair styling; it's a skilled craft that combines technique, artistry, and deep cultural knowledge. We are the sanctuary where your loc journey begins, evolves, and thrives.</p>
+                <a href="#services" class="btn">Explore Our Craft</a>
+            </div>
+        </div>
+    </section>
+
+     <!-- About Section with Video -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2><span class="rasta-title">Our Sanctuary</span></h2>
+                <p>Where tradition meets artistry in the heart of Nairobi</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At <strong>Judith Saloon</strong> in Kenyatta Market, we understand that dreadlocks are more than a hairstyle—they're a journey, a statement, and a living art form. As master architects and caretakers for locs, we approach each client with reverence for the craft and respect for the cultural significance of locs in African heritage.</p>
+                    <p>Our studio is a sanctuary where your locs receive the dedicated attention they deserve. From the initial consultation to ongoing maintenance, we combine traditional techniques with modern artistry to create and maintain healthy, beautiful locs that reflect your unique identity.</p>
+                    <p>We honor the roots of this practice while innovating with styles that suit contemporary life. Each service is performed with precision, patience, and passion, embodying the spirit of Rastafari culture and African pride.</p>
+                </div>
+                <div class="video-container">
+                    <!-- Video showcasing our work -->
+                    <video id="salonVideo" loop muted playsinline>
+                        <!-- Using a video placeholder - replace with your actual salon video -->
+                        <source src="vids/pin.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay">
+                        <div class="play-button" id="playButton">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2><span class="rasta-title">Our Craft</span></h2>
+                <p>Each service is performed with the utmost care, expertise, and cultural respect</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Installation Service -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/inst.jpg" alt="Dreadlock installation process">
+                    </div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-seedling service-icon"></i> Installation</h3>
+                        <p><em>Starting the Journey</em></p>
+                        <ul>
+                            <li><strong>Consultation:</strong> Discussing desired loc size, method, and hair type</li>
+                            <li><strong>Method Selection:</strong> Twist and rip, backcombing, interlocking, crochet method, or freeforming</li>
+                            <li><strong>Sectioning:</strong> Precise mapping and parting for perfect pattern and aesthetic</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Maintenance Service -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/mainta.jpg" alt="Dreadlock maintenance and retightening">
+                    </div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-hands service-icon"></i> Maintenance & Retightening</h3>
+                        <p><em>The Ongoing Care</em></p>
+                        <ul>
+                            <li><strong>Retwisting/Retightening:</strong> Palm rolling, interlocking, or crochet hook method</li>
+                            <li><strong>Washing & Conditioning:</strong> Specialized techniques for clean, healthy locs</li>
+                            <li><strong>Repair:</strong> Fixing weak spots, thinning locs, or broken locs</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Styling Service -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/style.jpg" alt="Styled dreadlocks with artistic designs">
+                    </div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-palette service-icon"></i> Styling & Artistic Work</h3>
+                        <p><em>Creative Expression</em></p>
+                        <ul>
+                            <li><strong>Intricate Styles:</strong> Loc updos, buns, braids, and crowns</li>
+                            <li><strong>Accessories:</strong> Rings, beads, threads, or wraps</li>
+                            <li><strong>Cutting & Shaping:</strong> Silhouettes and fades</li>
+                            <li><strong>Color Services:</strong> Dyes and bleaches with special care</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Styling Service -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/dre 5.jpg" alt="Styled dreadlocks with artistic designs">
+                    </div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-palette service-icon"></i> Styling & Artistic Work</h3>
+                        <p><em>Creative Expression</em></p>
+                        <ul>
+                            <li><strong>Intricate Styles:</strong> Loc updos, buns, braids, and crowns</li>
+                            <li><strong>Accessories:</strong> Rings, beads, threads, or wraps</li>
+                            <li><strong>Cutting & Shaping:</strong> Silhouettes and fades</li>
+                            <li><strong>Color Services:</strong> Dyes and bleaches with special care</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Styling Service -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/dread.jpg" alt="Styled dreadlocks with artistic designs">
+                    </div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-palette service-icon"></i> Styling & Artistic Work</h3>
+                        <p><em>Creative Expression</em></p>
+                        <ul>
+                            <li><strong>Intricate Styles:</strong> Loc updos, buns, braids, and crowns</li>
+                            <li><strong>Accessories:</strong> Rings, beads, threads, or wraps</li>
+                            <li><strong>Cutting & Shaping:</strong> Silhouettes and fades</li>
+                            <li><strong>Color Services:</strong> Dyes and bleaches with special care</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Health Service -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/d4.jpg" alt="Dreadlock health and wellness treatment">
+                    </div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-spa service-icon"></i> Health & Wellness</h3>
+                        <p><em>For Your Locs</em></p>
+                        <ul>
+                            <li><strong>Buildup Removal:</strong> Deep cleanses for residue, lint, or environmental buildup</li>
+                            <li><strong>Client Education:</strong> Teaching proper at-home care and drying techniques</li>
+                            <li><strong>Issue Resolution:</strong> Addressing lint accumulation, excessive tightening, or scalp health</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Visit Our Sanctuary</h2>
+                <p>Begin or continue your loc journey with us at Kenyatta Market</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Our Nairobi Sanctuary</h3>
+                    <p>At Judith Saloon in Kenyatta Market, we believe in creating a peaceful, respectful environment where your locs can be nurtured by skilled hands. Each appointment is given the time and attention it deserves in the heart of Nairobi's vibrant culture.</p>
+                    
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Judith Saloon, Kenyatta Market, Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 710846655</p>
+                        <p><i class="fas fa-envelope"></i> judith@judithsaloon.co.ke</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9am-7pm | Sun: 12pm-5pm</p>
+                        <p><i class="fas fa-whatsapp"></i> WhatsApp: +254 710846655</p>
+                    </div>
+                    
+                    <!-- STATIC MAP IMAGE THAT ALWAYS WORKS -->
+                    <div class="map-container" id="mapContainer">
+                        <!-- Static map image - ALWAYS LOADS -->
+                        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Kenyatta+Market,Nairobi,Kenya&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7Clabel:J%7C-1.2828,36.8081&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" 
+                             alt="Judith Saloon Location at Kenyatta Market, Nairobi"
+                             class="map-image">
+                        
+                        <!-- Overlay with clickable link -->
+                        <div class="map-overlay">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h4>Click to Open in Google Maps</h4>
+                            <p>Get directions to our salon</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn" id="contactBookBtn" style="margin-top: 30px;">Book Your Consultation</a>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <p>Have questions about your loc journey? We're here to help!</p>
+                    
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone">
+                        <select style="width: 100%; padding: 15px; margin-bottom: 20px; border-radius: 5px; background-color: rgba(255,255,255,0.1); color: white; border: none; border-left: 3px solid var(--rasta-green);">
+                            <option value="">Service of Interest</option>
+                            <option value="installation">New Installation</option>
+                            <option value="maintenance">Maintenance</option>
+                            <option value="styling">Styling</option>
+                            <option value="repair">Repair/Health</option>
+                            <option value="consultation">Consultation</option>
+                        </select>
+                        <textarea placeholder="Tell us about your loc journey or ask a question..." required></textarea>
+                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="logo" style="color:white; font-size: 1.8rem;">
+                    <i class="fas fa-crown logo-icon"></i>
+                    <span style="color: var(--rasta-gold);">Judith</span>Saloon
+                </a>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Judith Saloon, Kenyatta Market,Mtongwe RD, Nairobi, Kenya. All rights reserved. | Master Architects & Caretakers for Locs</p>
+                <p style="margin-top: 10px;">Proudly serving Nairobi's loc community with cultural respect and artistic excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <h2 style="color: var(--rasta-red);">Book Your Consultation</h2>
+            <p>Begin your loc journey with a personalized consultation at Judith Saloon. We'll discuss your vision, assess your hair, and create a plan tailored to your needs.</p>
+            
+            <form id="bookingForm" style="margin-top:20px;">
+                <input type="text" placeholder="Full Name" required style="width:100%; margin-bottom:15px; padding:12px; border: 1px solid #ddd; border-radius: 5px;">
+                <input type="email" placeholder="Email Address" required style="width:100%; margin-bottom:15px; padding:12px; border: 1px solid #ddd; border-radius: 5px;">
+                <input type="tel" placeholder="Phone Number" required style="width:100%; margin-bottom:15px; padding:12px; border: 1px solid #ddd; border-radius: 5px;">
+                <select style="width:100%; margin-bottom:15px; padding:12px; background-color:#f5f5f5; border:1px solid #ddd; border-radius:5px;">
+                    <option value="">Select Service Interest</option>
+                    <option value="installation">New Installation</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="styling">Styling</option>
+                    <option value="repair">Repair/Health</option>
+                    <option value="consultation">Consultation Only</option>
+                </select>
+                <textarea placeholder="Any specific questions or concerns?" style="width:100%; margin-bottom:20px; padding:12px; height:100px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+                <button type="submit" class="btn" style="width:100%;">Request Consultation</button>
+            </form>
+            
+            <p style="margin-top:20px; font-size:0.9rem; color:#666;">We'll contact you within 24 hours to confirm your appointment at our Kenyatta Market location.</p>
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        const header = document.getElementById('header');
+        const bookBtns = document.querySelectorAll('#bookBtn, #contactBookBtn');
+        const bookingModal = document.getElementById('bookingModal');
+        const closeModal = document.getElementById('closeModal');
+        const contactForm = document.getElementById('contactForm');
+        const bookingForm = document.getElementById('bookingForm');
+        const salonVideo = document.getElementById('salonVideo');
+        const playButton = document.getElementById('playButton');
+        const mapContainer = document.getElementById('mapContainer');
+        
+        // Mobile Menu Toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
+                header.style.padding = '10px 0';
+            } else {
+                header.style.backgroundColor = 'var(--rasta-black)';
+                header.style.padding = '15px 0';
+            }
+        });
+
+         // Video control
+        let videoPlaying = false;
+        
+        playButton.addEventListener('click', () => {
+            if (videoPlaying) {
+                salonVideo.pause();
+                playButton.innerHTML = '<i class="fas fa-play"></i>';
+            } else {
+                salonVideo.play();
+                playButton.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            videoPlaying = !videoPlaying;
+        });
+        
+        // Autoplay video on load (muted)
+        window.addEventListener('load', () => {
+            salonVideo.play().catch(e => {
+                console.log("Autoplay prevented, user interaction required");
+            });
+        });
+
+        // Map functionality - opens Google Maps in new tab when clicked
+        mapContainer.addEventListener('click', () => {
+            window.open('https://www.google.com/maps?q=Kenyatta+Market+Nairobi+Kenya&ll=-1.2828,36.8081&z=16', '_blank');
+        });
+        
+        // Modal functionality
+        bookBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                bookingModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            bookingModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === bookingModal) {
+                bookingModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Form submissions (demo only - no backend)
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Asante! Thank you for your message. We will contact you soon to discuss your loc journey. In a real implementation, this would connect to a backend service.');
+            contactForm.reset();
+        });
+        
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Consultation requested! We\'ll contact you within 24 hours to schedule your appointment at Judith Saloon in Kenyatta Market.');
+            bookingForm.reset();
+            bookingModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Service cards animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+        
+        // Rasta colors animation for title
+        const rastaTitle = document.querySelector('.rasta-title');
+        if(rastaTitle) {
+            setInterval(() => {
+                rastaTitle.style.background = `linear-gradient(to right, ${getRandomRastaColor()}, ${getRandomRastaColor()}, ${getRandomRastaColor()})`;
+                rastaTitle.style.webkitBackgroundClip = 'text';
+                rastaTitle.style.backgroundClip = 'text';
+            }, 3000);
+        }
+        
+        function getRandomRastaColor() {
+            const rastaColors = ['#C00', '#FFD700', '#008000', '#000'];
+            return rastaColors[Math.floor(Math.random() * rastaColors.length)];
+        }
+
+        // Fix for map loading issue
+        window.addEventListener('load', () => {
+            // Refresh map iframe to ensure it loads
+            const mapIframe = document.querySelector('.map-container iframe');
+            if (mapIframe) {
+                const mapSrc = mapIframe.src;
+                mapIframe.src = '';
+                setTimeout(() => {
+                    mapIframe.src = mapSrc;
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>
